@@ -1,0 +1,22 @@
+{
+  "name": "js-interview",
+  "version": "1.0.0",
+  "description": "preparation for interview",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "keywords": [
+    "['javascript'",
+    "'nodejs'",
+    "'es6'",
+    "'interview']"
+  ],
+  "author": "sofikulm",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "fs": "0.0.1-security",
+    "http": "0.0.0"
+  }
+}
