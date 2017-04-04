@@ -1,5 +1,3 @@
-Useful Node.js interview questions
-
 What is an error-first callback?
 How can you avoid callback hells?
 How can you listen on port 80 with Node?

@@ -1,4 +1,9 @@
-//This is one example of callback hell
+/**
+Same task can be done by callback and promise example
+I am showing the two way below -
+**/
+
+//This is one example of callback
 
 const fs = require('fs');
 const Path = require('path');
@@ -23,12 +28,10 @@ fs.readFile(Path.join(__dirname, 'text1.txt'), (err, data) => {
 	})
 })
 
-//This can be overcome by modularization
-//better by promise
+//Promise
 
-//synchronous style of asynchronous programing
-const Promise = require('bluebird');
-const fsPromise = Promise.promisifyAll(fs);
+const Promiseb = require('bluebird');
+const fsPromise = Promiseb.promisifyAll(fs);
 
 fsPromise.readFileAsync(Path.join(__dirname, 'text1.txt'))
 	.then((data) => {
@@ -51,3 +54,17 @@ fsPromise.readFileAsync(Path.join(__dirname, 'text1.txt'))
 	}).catch((err) =>{
 		console.log(`${err}`);
 	});
+
+
+/**
+Advantages of promise over callback:
+
+1. Promise is a syntactic sugar added in ES6
+Using promise we can write asynchronous code in a syncronous way.
+It helps to avoid callback hell, increase readability.
+
+2. Error can be handled better way in promise.
+
+3. Chaining of different asynchronous work is syntactically very easy to write.
+
+**/
