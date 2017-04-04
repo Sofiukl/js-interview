@@ -1,0 +1,20 @@
+1. What is Nodejs?
+
+Nodejs is an asynchronous non blocking io framework developed based on google's V8.
+Some good features are -
+1. Its very fast.
+2. Its event driven.
+3. Single threaded but highly scalable.
+
+2. What is latest version of Nodejs?
+
+3. What is NPM?
+
+
+4. Why Nodejs is single threaded?
+
+5. Mention the steps by which you can async in Nodejs?
+
+6. How Nodejs overcomes the problem of blocking I/O?
+
+7. What is callback in Nodejs?
