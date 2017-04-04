@@ -1,3 +1,4 @@
+
 1. What is Nodejs?
 
 Nodejs is an asynchronous non blocking io framework developed based on google's V8.
@@ -9,12 +10,42 @@ Some good features are -
 2. What is latest version of Nodejs?
 
 3. What is NPM?
+NMP is node package manager.It manages all the node packages.
+We can download packages from NPM. It tracks the history, ranking of the packages to help
+developer to find the stable packages.
 
+npm install <package_name> --save
 
 4. Why Nodejs is single threaded?
+
+Nodejs runs using single thread at least from a Node.js developer point
+of view. Under the hood Node.js uses many thread through libuv.	
 
 5. Mention the steps by which you can async in Nodejs?
 
 6. How Nodejs overcomes the problem of blocking I/O?
 
+Nodejs runs using single thread at least from a Node.js developer point
+of view. Under the hood Node.js uses many thread through libuv.	
+
+Every I/O requires a callback - once they are done they are pushed onto the event loop
+for execution. The I/O operation will be executed in different thread not blocking the
+main execution thread. When the opersation is completed then callback executed in 
+main thread by the event loop.
+
+
 7. What is callback in Nodejs?
+
+Callback is a first class function in javascript which is passed as an argument in an asynchronous
+functions. This is called when the asynchronous operation is completed.
+
+Ex- Suppose reading a file takes long time, we can use concept of callback here.
+When the task of reading the file is completed then callback function will be called with data.
+The task reading will be executed in different thread other than main execution thread and when its done
+then callback will be executed in main thread.
+
+Reference
+============================
+http://career.guru99.com/top-25-interview-questions-on-node-js/
+
+
