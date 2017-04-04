@@ -11,3 +11,5 @@ What's your favourite HTTP framework and why?
 
 1. https://blog.risingstack.com/node-js-interview-questions/
 2. https://www.toptal.com/nodejs/interview-questions
+
+https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes
