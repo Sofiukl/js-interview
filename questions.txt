@@ -1,10 +1,4 @@
-What is an error-first callback?
-How can you avoid callback hells?
-How can you listen on port 80 with Node?
-What's the event loop?
 What tools can be used to assure consistent style?
-What's the difference between operational and programmer errors?
-Why npm shrinkwrap is useful?
 What's a stub? Name a use case.
 What's a test pyramid? How can you implement it when talking about HTTP APIs?
 What's your favourite HTTP framework and why?

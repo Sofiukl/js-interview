@@ -1,13 +1,14 @@
-
 1. What is Nodejs?
+Nodejs is a server-side javascript framework built on google's V8 engine.
+Its an open source and cross platform application to develop server side and network application.
 
-Nodejs is an asynchronous non blocking io framework developed based on google's V8.
 Some good features are -
 1. Its very fast.
-2. Its event driven.
+2. Its event driven and asynchronous.
 3. Single threaded but highly scalable.
 
 2. What is latest version of Nodejs?
+Current v7.8.0, LTS v6.10.2
 
 3. What is NPM?
 NMP is node package manager.It manages all the node packages.
@@ -16,14 +17,14 @@ developer to find the stable packages.
 
 npm install <package_name> --save
 
-4. Why Nodejs is single threaded?
+*4. Why Nodejs is single threaded? (In Progress)
 
-Nodejs runs using single thread at least from a Node.js developer point
-of view. Under the hood Node.js uses many thread through libuv.	
+Node draws from V8, runtime for google chrome browser. V8 is internally single-threaded.
+Under the hood Node.js uses many thread through libuv for asynchronous operation.
 
 5. Mention the steps by which you can async in Nodejs?
 
-6. How Nodejs overcomes the problem of blocking I/O?
+6. How Nodejs overcomes the problem of blocking I/O? (In Progress)
 
 Nodejs runs using single thread at least from a Node.js developer point
 of view. Under the hood Node.js uses many thread through libuv.	
@@ -44,8 +45,42 @@ When the task of reading the file is completed then callback function will be ca
 The task reading will be executed in different thread other than main execution thread and when its done
 then callback will be executed in main thread.
 
+8. What is an error-first callback?
+In general practice error is the first argument of the callback function.
+That's why its called error-first callback.
+
+8. What is event loop? (Open)
+
+9. What is the most popular HTTP framework?
+Its express. Because its quite stable.
+We can easliy create server and api end points with the framework.
+
+10. what is closure?
+
+Question 11: What is NPM? What is the need of NPM in Node.js?
+
+Answer 
+
+NPM stands for Node.js Package Management. It comes with Node.js platform and allows us to install various packages for Node.js. This package manages and supports various commands to install and remove the modules. Here one important note is we require either package.json file or the node_modules folder to install modules locally.
+
+One of the best things about npm is that it locally stores all dependencies. For example, if module X uses module A version 1.0, and module Y uses module A version 1.5, then both X and Y will have their own local copies of module A.
+
+Need of npm package
+
+While I was working on a real node.js application I encountered many instances where I needed to write a few libraries. Recently, I thought these libraries could be useful for others. Afterward, I discovered the npm package.
+
+
+Question 14: Explain Process.nextTick() function in Node.js.
+
+Answer 
+
+The Process.nextTick() function typically runs before any other I/O events fire. As we know, every node application runs on a single thread, in other words only one task or event is processed by Node's event loop. In an event loop, a queue of callbacks are processed by Node on every Tick of the event loop. On the next loop around the event loop calls these callbacks.
+
+The Process.nextTick() function defers the function until a completely new stack. You can call as many functions as you want to in the current stack. When the event loop is looking for a new event to execute the nextTick function will be in the queue and will execute an entire new stack. The Process.nextTick() function defers the execution of an action until the next pass around the event loop.
+
 Reference
 ============================
-http://career.guru99.com/top-25-interview-questions-on-node-js/
+1. http://career.guru99.com/top-25-interview-questions-on-node-js/
+2. http://www.c-sharpcorner.com/article/top-50-node-js-interview-questions-and-answers/
 
 
