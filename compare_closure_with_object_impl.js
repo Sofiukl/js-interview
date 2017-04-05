@@ -35,5 +35,50 @@ We can implement this using object factory also.
 Lets check that example.
 **/
 
+function newPerson(name){
 
+	const msg = `Hi ${name}`;
+
+	return {
+		greet() {
+			console.log(msg);
+		},
+		greetAsync() {
+			setTimeout(() => {
+				console.log(msg);		
+			},1000)
+		}
+	}
+
+}
+
+let Sofikul = newPerson('Sofikul');
+Sofikul.greet();
+Sofikul.greetAsync();
+
+
+//same implementation using object property, not closure
+
+function Person(name){
+	this.msg = `Hi ${msg}`;
+}
+
+Person.prototype.greet = () =>{
+	console.log(msg);
+}
+
+Person.prototype.greetAsync = () =>{
+	let self = this;
+	setTimeout(() => {
+		console.log(msg);		
+	},1000)
+}
+
+let p = new Person('Raja');
+p.greet();
+p.greetAsync();
+
+
+//https://howtonode.org/why-use-closure
+//https://howtonode.org/why-use-closure
 
